@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0786D1F3225C9C5400D53919 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D1F2225C9C5400D53919 /* AppDelegate.m */; };
+		0786D1F6225C9C5400D53919 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D1F5225C9C5400D53919 /* ViewController.m */; };
+		0786D1F9225C9C5400D53919 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0786D1F7225C9C5400D53919 /* Main.storyboard */; };
+		0786D1FB225C9C5600D53919 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0786D1FA225C9C5600D53919 /* Assets.xcassets */; };
+		0786D1FE225C9C5600D53919 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0786D1FC225C9C5600D53919 /* LaunchScreen.storyboard */; };
+		0786D201225C9C5600D53919 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D200225C9C5600D53919 /* main.m */; };
+		0786D209225DBBA000D53919 /* CYFGlobalManager_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D208225DBBA000D53919 /* CYFGlobalManager_.m */; };
+		0786D20B225DC3C000D53919 /* AkamaiBMP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0786D20A225DC3C000D53919 /* AkamaiBMP.framework */; };
+		0786D20F225ED89D00D53919 /* NSString+CYFExtra_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D20E225ED89D00D53919 /* NSString+CYFExtra_.m */; };
+		0786D212225F300700D53919 /* CYFManager_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D211225F300700D53919 /* CYFManager_.m */; };
+		0786D215225F467600D53919 /* SecureSensorData_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D214225F467600D53919 /* SecureSensorData_.m */; };
+		0786D218225F46A700D53919 /* SensorDataCache_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D217225F46A700D53919 /* SensorDataCache_.m */; };
+		0786D21B2260270800D53919 /* CYFUtilities_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D21A2260270800D53919 /* CYFUtilities_.m */; };
+		0786D21E22603D9900D53919 /* CYFTouchEventManager_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D21D22603D9900D53919 /* CYFTouchEventManager_.m */; };
+		0786D22122603E2D00D53919 /* CYFTextEventManager_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D22022603E2D00D53919 /* CYFTextEventManager_.m */; };
+		0786D22422603ED800D53919 /* CYFMotionManager_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D22322603ED800D53919 /* CYFMotionManager_.m */; };
+		0786D2272260430600D53919 /* CYFBackgroundEventManager_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D2262260430600D53919 /* CYFBackgroundEventManager_.m */; };
+		0786D22B226098BA00D53919 /* FeistelCipher_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D22A226098BA00D53919 /* FeistelCipher_.m */; };
+		0786D22E2264373800D53919 /* CYFSensorDataSnapshot_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D22D2264373800D53919 /* CYFSensorDataSnapshot_.m */; };
+		0786D2312264398C00D53919 /* CYFKeyBoardEventManager_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D2302264398C00D53919 /* CYFKeyBoardEventManager_.m */; };
+		0786D23422644F4900D53919 /* UIResponder+CYFInitialize_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D23322644F4900D53919 /* UIResponder+CYFInitialize_.m */; };
+		0786D237226495E300D53919 /* RSACrypt_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D236226495E300D53919 /* RSACrypt_.m */; };
+		0786D23A2265B83F00D53919 /* NSValue+CYFTouchEventEnumValues_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D2392265B83F00D53919 /* NSValue+CYFTouchEventEnumValues_.m */; };
+		0786D23D2265BF8800D53919 /* CYFKeyWindowTouchEventFormatter_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D23C2265BF8800D53919 /* CYFKeyWindowTouchEventFormatter_.m */; };
+		0786D2402265BFCF00D53919 /* CFYTouchEventFormatterBase_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D23F2265BFCF00D53919 /* CFYTouchEventFormatterBase_.m */; };
+		0786D2432265C81100D53919 /* CYFTouchData_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D2422265C81100D53919 /* CYFTouchData_.m */; };
+		0786D2462265C9F700D53919 /* NSDate+CYFExtra_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D2452265C9F700D53919 /* NSDate+CYFExtra_.m */; };
+		0786D2492265DB3A00D53919 /* CYFTouchEventRecognizerFactory_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D2482265DB3A00D53919 /* CYFTouchEventRecognizerFactory_.m */; };
+		0786D24C2265DBEA00D53919 /* CYFTouchEventRecognizer_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D24B2265DBEA00D53919 /* CYFTouchEventRecognizer_.m */; };
+		0786D2582265E87A00D53919 /* CYFMotionHandler_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D2572265E87A00D53919 /* CYFMotionHandler_.m */; };
+		0786D25A2265E8C100D53919 /* CYFMotionModel_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D2592265E8C100D53919 /* CYFMotionModel_.m */; };
+		0786D25C2265E8F600D53919 /* CYFMotionModelDelta_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D25B2265E8F600D53919 /* CYFMotionModelDelta_.m */; };
+		0786D25E2265E91E00D53919 /* CYFOrientationHandler_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D25D2265E91D00D53919 /* CYFOrientationHandler_.m */; };
+		0786D2602265E93E00D53919 /* CYFOriModel_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D25F2265E93E00D53919 /* CYFOriModel_.m */; };
+		0786D2622265E95D00D53919 /* CYFOriModelDelta_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D2612265E95D00D53919 /* CYFOriModelDelta_.m */; };
+		0786D2692268475400D53919 /* CYFBackgroundEvent_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D2682268475400D53919 /* CYFBackgroundEvent_.m */; };
+		0786D26B2268483500D53919 /* CYFBackgroundEventFormatter_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D26A2268483500D53919 /* CYFBackgroundEventFormatter_.m */; };
+		0786D26D2268492700D53919 /* CYFBackgroundEventListener_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D26C2268492700D53919 /* CYFBackgroundEventListener_.m */; };
+		0786D27622685C1200D53919 /* CYFTextEvent_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D27522685C1200D53919 /* CYFTextEvent_.m */; };
+		0786D27822685C3100D53919 /* CYFTextEventFormatter_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D27722685C3100D53919 /* CYFTextEventFormatter_.m */; };
+		0786D27A22685C4F00D53919 /* CYFTextEventListener_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D27922685C4F00D53919 /* CYFTextEventListener_.m */; };
+		0786D27C22685C7D00D53919 /* CYFTextFormfieldDataFormatter_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D27B22685C7D00D53919 /* CYFTextFormfieldDataFormatter_.m */; };
+		0786D27F2268790F00D53919 /* libc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0786D27E2268790F00D53919 /* libc.tbd */; };
+		0786D2812269986100D53919 /* Hook.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0786D2802269986100D53919 /* Hook.mm */; };
+		0786D2832269AB4800D53919 /* libSystem.B.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0786D2822269AB4800D53919 /* libSystem.B.tbd */; };
+		0786D2882269C0A500D53919 /* CYFKeyBoardWindowTouchEventFormatter_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D2872269C0A500D53919 /* CYFKeyBoardWindowTouchEventFormatter_.m */; };
+		0786D28A2269C0F000D53919 /* CYFKeyBoardWindowTouchEventRecognizer_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D2892269C0F000D53919 /* CYFKeyBoardWindowTouchEventRecognizer_.m */; };
+		0786D28C2269C12D00D53919 /* CYFKeyWindowTouchEventRecognizer_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D28B2269C12D00D53919 /* CYFKeyWindowTouchEventRecognizer_.m */; };
+		0786D28F2269C68200D53919 /* UIApplication+CYFKeyboard_.m in Sources */ = {isa = PBXBuildFile; fileRef = 0786D28E2269C68200D53919 /* UIApplication+CYFKeyboard_.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0786D1EE225C9C5400D53919 /* nike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0786D1F1225C9C5400D53919 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0786D1F2225C9C5400D53919 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0786D1F4225C9C5400D53919 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0786D1F5225C9C5400D53919 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0786D1F8225C9C5400D53919 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0786D1FA225C9C5600D53919 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0786D1FD225C9C5600D53919 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0786D1FF225C9C5600D53919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0786D200225C9C5600D53919 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0786D207225DBBA000D53919 /* CYFGlobalManager_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYFGlobalManager_.h; sourceTree = "<group>"; };
+		0786D208225DBBA000D53919 /* CYFGlobalManager_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFGlobalManager_.m; sourceTree = "<group>"; };
+		0786D20A225DC3C000D53919 /* AkamaiBMP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AkamaiBMP.framework; sourceTree = "<group>"; };
+		0786D20D225ED89D00D53919 /* NSString+CYFExtra_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+CYFExtra_.h"; sourceTree = "<group>"; };
+		0786D20E225ED89D00D53919 /* NSString+CYFExtra_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+CYFExtra_.m"; sourceTree = "<group>"; };
+		0786D210225F300700D53919 /* CYFManager_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYFManager_.h; sourceTree = "<group>"; };
+		0786D211225F300700D53919 /* CYFManager_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFManager_.m; sourceTree = "<group>"; };
+		0786D213225F467600D53919 /* SecureSensorData_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecureSensorData_.h; sourceTree = "<group>"; };
+		0786D214225F467600D53919 /* SecureSensorData_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecureSensorData_.m; sourceTree = "<group>"; };
+		0786D216225F46A700D53919 /* SensorDataCache_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SensorDataCache_.h; sourceTree = "<group>"; };
+		0786D217225F46A700D53919 /* SensorDataCache_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorDataCache_.m; sourceTree = "<group>"; };
+		0786D2192260270800D53919 /* CYFUtilities_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYFUtilities_.h; sourceTree = "<group>"; };
+		0786D21A2260270800D53919 /* CYFUtilities_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFUtilities_.m; sourceTree = "<group>"; };
+		0786D21C22603D9900D53919 /* CYFTouchEventManager_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYFTouchEventManager_.h; sourceTree = "<group>"; };
+		0786D21D22603D9900D53919 /* CYFTouchEventManager_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFTouchEventManager_.m; sourceTree = "<group>"; };
+		0786D21F22603E2D00D53919 /* CYFTextEventManager_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYFTextEventManager_.h; sourceTree = "<group>"; };
+		0786D22022603E2D00D53919 /* CYFTextEventManager_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFTextEventManager_.m; sourceTree = "<group>"; };
+		0786D22222603ED800D53919 /* CYFMotionManager_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYFMotionManager_.h; sourceTree = "<group>"; };
+		0786D22322603ED800D53919 /* CYFMotionManager_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFMotionManager_.m; sourceTree = "<group>"; };
+		0786D2252260430600D53919 /* CYFBackgroundEventManager_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYFBackgroundEventManager_.h; sourceTree = "<group>"; };
+		0786D2262260430600D53919 /* CYFBackgroundEventManager_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFBackgroundEventManager_.m; sourceTree = "<group>"; };
+		0786D2282260819E00D53919 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0786D229226098BA00D53919 /* FeistelCipher_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeistelCipher_.h; sourceTree = "<group>"; };
+		0786D22A226098BA00D53919 /* FeistelCipher_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeistelCipher_.m; sourceTree = "<group>"; };
+		0786D22C2264373800D53919 /* CYFSensorDataSnapshot_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYFSensorDataSnapshot_.h; sourceTree = "<group>"; };
+		0786D22D2264373800D53919 /* CYFSensorDataSnapshot_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFSensorDataSnapshot_.m; sourceTree = "<group>"; };
+		0786D22F2264398C00D53919 /* CYFKeyBoardEventManager_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYFKeyBoardEventManager_.h; sourceTree = "<group>"; };
+		0786D2302264398C00D53919 /* CYFKeyBoardEventManager_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFKeyBoardEventManager_.m; sourceTree = "<group>"; };
+		0786D23222644F4900D53919 /* UIResponder+CYFInitialize_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIResponder+CYFInitialize_.h"; sourceTree = "<group>"; };
+		0786D23322644F4900D53919 /* UIResponder+CYFInitialize_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+CYFInitialize_.m"; sourceTree = "<group>"; };
+		0786D235226495E300D53919 /* RSACrypt_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSACrypt_.h; sourceTree = "<group>"; };
+		0786D236226495E300D53919 /* RSACrypt_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSACrypt_.m; sourceTree = "<group>"; };
+		0786D2382265B83F00D53919 /* NSValue+CYFTouchEventEnumValues_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSValue+CYFTouchEventEnumValues_.h"; sourceTree = "<group>"; };
+		0786D2392265B83F00D53919 /* NSValue+CYFTouchEventEnumValues_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSValue+CYFTouchEventEnumValues_.m"; sourceTree = "<group>"; };
+		0786D23B2265BF8800D53919 /* CYFKeyWindowTouchEventFormatter_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYFKeyWindowTouchEventFormatter_.h; sourceTree = "<group>"; };
+		0786D23C2265BF8800D53919 /* CYFKeyWindowTouchEventFormatter_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFKeyWindowTouchEventFormatter_.m; sourceTree = "<group>"; };
+		0786D23E2265BFCF00D53919 /* CFYTouchEventFormatterBase_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFYTouchEventFormatterBase_.h; sourceTree = "<group>"; };
+		0786D23F2265BFCF00D53919 /* CFYTouchEventFormatterBase_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFYTouchEventFormatterBase_.m; sourceTree = "<group>"; };
+		0786D2412265C81100D53919 /* CYFTouchData_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYFTouchData_.h; sourceTree = "<group>"; };
+		0786D2422265C81100D53919 /* CYFTouchData_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFTouchData_.m; sourceTree = "<group>"; };
+		0786D2442265C9F700D53919 /* NSDate+CYFExtra_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+CYFExtra_.h"; sourceTree = "<group>"; };
+		0786D2452265C9F700D53919 /* NSDate+CYFExtra_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CYFExtra_.m"; sourceTree = "<group>"; };
+		0786D2472265DB3A00D53919 /* CYFTouchEventRecognizerFactory_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYFTouchEventRecognizerFactory_.h; sourceTree = "<group>"; };
+		0786D2482265DB3A00D53919 /* CYFTouchEventRecognizerFactory_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFTouchEventRecognizerFactory_.m; sourceTree = "<group>"; };
+		0786D24A2265DBEA00D53919 /* CYFTouchEventRecognizer_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYFTouchEventRecognizer_.h; sourceTree = "<group>"; };
+		0786D24B2265DBEA00D53919 /* CYFTouchEventRecognizer_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFTouchEventRecognizer_.m; sourceTree = "<group>"; };
+		0786D24D2265DC5700D53919 /* CYFTouchEventRecognizerDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CYFTouchEventRecognizerDelegate-Protocol.h"; sourceTree = "<group>"; };
+		0786D24F2265E66A00D53919 /* CYFMotionModel_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFMotionModel_.h; sourceTree = "<group>"; };
+		0786D2502265E66A00D53919 /* CYFMotionModelDelta_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFMotionModelDelta_.h; sourceTree = "<group>"; };
+		0786D2512265E66A00D53919 /* CYFOrientationHandler_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFOrientationHandler_.h; sourceTree = "<group>"; };
+		0786D2522265E66B00D53919 /* CYFMotionHandler_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFMotionHandler_.h; sourceTree = "<group>"; };
+		0786D2532265E66B00D53919 /* CYFOriModelDelta_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFOriModelDelta_.h; sourceTree = "<group>"; };
+		0786D2542265E66B00D53919 /* CYFOriModel_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFOriModel_.h; sourceTree = "<group>"; };
+		0786D2572265E87A00D53919 /* CYFMotionHandler_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFMotionHandler_.m; sourceTree = "<group>"; };
+		0786D2592265E8C100D53919 /* CYFMotionModel_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFMotionModel_.m; sourceTree = "<group>"; };
+		0786D25B2265E8F600D53919 /* CYFMotionModelDelta_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFMotionModelDelta_.m; sourceTree = "<group>"; };
+		0786D25D2265E91D00D53919 /* CYFOrientationHandler_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFOrientationHandler_.m; sourceTree = "<group>"; };
+		0786D25F2265E93E00D53919 /* CYFOriModel_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFOriModel_.m; sourceTree = "<group>"; };
+		0786D2612265E95D00D53919 /* CYFOriModelDelta_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFOriModelDelta_.m; sourceTree = "<group>"; };
+		0786D26422682BD300D53919 /* CYFBackgroundEventFormatter_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFBackgroundEventFormatter_.h; sourceTree = "<group>"; };
+		0786D26522682BD300D53919 /* CYFBackgroundEvent_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFBackgroundEvent_.h; sourceTree = "<group>"; };
+		0786D26622682BD300D53919 /* CYFBackgroundEventListenerDelegate_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFBackgroundEventListenerDelegate_.h; sourceTree = "<group>"; };
+		0786D26722682BD300D53919 /* CYFBackgroundEventListener_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFBackgroundEventListener_.h; sourceTree = "<group>"; };
+		0786D2682268475400D53919 /* CYFBackgroundEvent_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFBackgroundEvent_.m; sourceTree = "<group>"; };
+		0786D26A2268483500D53919 /* CYFBackgroundEventFormatter_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFBackgroundEventFormatter_.m; sourceTree = "<group>"; };
+		0786D26C2268492700D53919 /* CYFBackgroundEventListener_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFBackgroundEventListener_.m; sourceTree = "<group>"; };
+		0786D26F22685A7700D53919 /* CYFTextEventListener_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFTextEventListener_.h; sourceTree = "<group>"; };
+		0786D27022685A7700D53919 /* CYFTextFormfieldDataFormatter_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFTextFormfieldDataFormatter_.h; sourceTree = "<group>"; };
+		0786D27122685A7700D53919 /* CYFTextEvent_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFTextEvent_.h; sourceTree = "<group>"; };
+		0786D27222685A7700D53919 /* CYFTextEventFormatter_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFTextEventFormatter_.h; sourceTree = "<group>"; };
+		0786D27522685C1200D53919 /* CYFTextEvent_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFTextEvent_.m; sourceTree = "<group>"; };
+		0786D27722685C3100D53919 /* CYFTextEventFormatter_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFTextEventFormatter_.m; sourceTree = "<group>"; };
+		0786D27922685C4F00D53919 /* CYFTextEventListener_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFTextEventListener_.m; sourceTree = "<group>"; };
+		0786D27B22685C7D00D53919 /* CYFTextFormfieldDataFormatter_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFTextFormfieldDataFormatter_.m; sourceTree = "<group>"; };
+		0786D27E2268790F00D53919 /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
+		0786D2802269986100D53919 /* Hook.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Hook.mm; sourceTree = "<group>"; };
+		0786D2822269AB4800D53919 /* libSystem.B.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.B.tbd; path = usr/lib/libSystem.B.tbd; sourceTree = SDKROOT; };
+		0786D2842269C06E00D53919 /* CYFKeyBoardWindowTouchEventFormatter_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFKeyBoardWindowTouchEventFormatter_.h; sourceTree = "<group>"; };
+		0786D2852269C06E00D53919 /* CYFKeyWindowTouchEventRecognizer_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFKeyWindowTouchEventRecognizer_.h; sourceTree = "<group>"; };
+		0786D2862269C06E00D53919 /* CYFKeyBoardWindowTouchEventRecognizer_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYFKeyBoardWindowTouchEventRecognizer_.h; sourceTree = "<group>"; };
+		0786D2872269C0A500D53919 /* CYFKeyBoardWindowTouchEventFormatter_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFKeyBoardWindowTouchEventFormatter_.m; sourceTree = "<group>"; };
+		0786D2892269C0F000D53919 /* CYFKeyBoardWindowTouchEventRecognizer_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFKeyBoardWindowTouchEventRecognizer_.m; sourceTree = "<group>"; };
+		0786D28B2269C12D00D53919 /* CYFKeyWindowTouchEventRecognizer_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYFKeyWindowTouchEventRecognizer_.m; sourceTree = "<group>"; };
+		0786D28D2269C68200D53919 /* UIApplication+CYFKeyboard_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+CYFKeyboard_.h"; sourceTree = "<group>"; };
+		0786D28E2269C68200D53919 /* UIApplication+CYFKeyboard_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+CYFKeyboard_.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0786D1EB225C9C5400D53919 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0786D2832269AB4800D53919 /* libSystem.B.tbd in Frameworks */,
+				0786D27F2268790F00D53919 /* libc.tbd in Frameworks */,
+				0786D20B225DC3C000D53919 /* AkamaiBMP.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0786D1E5225C9C5400D53919 = {
+			isa = PBXGroup;
+			children = (
+				0786D1F0225C9C5400D53919 /* nike */,
+				0786D1EF225C9C5400D53919 /* Products */,
+				0786D27D2268790F00D53919 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0786D1EF225C9C5400D53919 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0786D1EE225C9C5400D53919 /* nike.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0786D1F0225C9C5400D53919 /* nike */ = {
+			isa = PBXGroup;
+			children = (
+				0786D20A225DC3C000D53919 /* AkamaiBMP.framework */,
+				0786D1F1225C9C5400D53919 /* AppDelegate.h */,
+				0786D1F2225C9C5400D53919 /* AppDelegate.m */,
+				0786D1F4225C9C5400D53919 /* ViewController.h */,
+				0786D1F5225C9C5400D53919 /* ViewController.m */,
+				0786D2802269986100D53919 /* Hook.mm */,
+				0786D207225DBBA000D53919 /* CYFGlobalManager_.h */,
+				0786D208225DBBA000D53919 /* CYFGlobalManager_.m */,
+				0786D210225F300700D53919 /* CYFManager_.h */,
+				0786D211225F300700D53919 /* CYFManager_.m */,
+				0786D213225F467600D53919 /* SecureSensorData_.h */,
+				0786D214225F467600D53919 /* SecureSensorData_.m */,
+				0786D216225F46A700D53919 /* SensorDataCache_.h */,
+				0786D217225F46A700D53919 /* SensorDataCache_.m */,
+				0786D2552265E75100D53919 /* Touch */,
+				0786D26E22685A4B00D53919 /* Text */,
+				0786D2562265E78400D53919 /* Motion */,
+				0786D22F2264398C00D53919 /* CYFKeyBoardEventManager_.h */,
+				0786D2302264398C00D53919 /* CYFKeyBoardEventManager_.m */,
+				0786D28D2269C68200D53919 /* UIApplication+CYFKeyboard_.h */,
+				0786D28E2269C68200D53919 /* UIApplication+CYFKeyboard_.m */,
+				0786D26322682B7E00D53919 /* Background */,
+				0786D22C2264373800D53919 /* CYFSensorDataSnapshot_.h */,
+				0786D22D2264373800D53919 /* CYFSensorDataSnapshot_.m */,
+				0786D2192260270800D53919 /* CYFUtilities_.h */,
+				0786D21A2260270800D53919 /* CYFUtilities_.m */,
+				0786D229226098BA00D53919 /* FeistelCipher_.h */,
+				0786D22A226098BA00D53919 /* FeistelCipher_.m */,
+				0786D235226495E300D53919 /* RSACrypt_.h */,
+				0786D236226495E300D53919 /* RSACrypt_.m */,
+				0786D20D225ED89D00D53919 /* NSString+CYFExtra_.h */,
+				0786D20E225ED89D00D53919 /* NSString+CYFExtra_.m */,
+				0786D2442265C9F700D53919 /* NSDate+CYFExtra_.h */,
+				0786D2452265C9F700D53919 /* NSDate+CYFExtra_.m */,
+				0786D23222644F4900D53919 /* UIResponder+CYFInitialize_.h */,
+				0786D23322644F4900D53919 /* UIResponder+CYFInitialize_.m */,
+				0786D1F7225C9C5400D53919 /* Main.storyboard */,
+				0786D1FA225C9C5600D53919 /* Assets.xcassets */,
+				0786D1FC225C9C5600D53919 /* LaunchScreen.storyboard */,
+				0786D1FF225C9C5600D53919 /* Info.plist */,
+				0786D200225C9C5600D53919 /* main.m */,
+				0786D2282260819E00D53919 /* PrefixHeader.pch */,
+			);
+			path = nike;
+			sourceTree = "<group>";
+		};
+		0786D2552265E75100D53919 /* Touch */ = {
+			isa = PBXGroup;
+			children = (
+				0786D21C22603D9900D53919 /* CYFTouchEventManager_.h */,
+				0786D21D22603D9900D53919 /* CYFTouchEventManager_.m */,
+				0786D2472265DB3A00D53919 /* CYFTouchEventRecognizerFactory_.h */,
+				0786D2482265DB3A00D53919 /* CYFTouchEventRecognizerFactory_.m */,
+				0786D2842269C06E00D53919 /* CYFKeyBoardWindowTouchEventFormatter_.h */,
+				0786D2872269C0A500D53919 /* CYFKeyBoardWindowTouchEventFormatter_.m */,
+				0786D2862269C06E00D53919 /* CYFKeyBoardWindowTouchEventRecognizer_.h */,
+				0786D2892269C0F000D53919 /* CYFKeyBoardWindowTouchEventRecognizer_.m */,
+				0786D2852269C06E00D53919 /* CYFKeyWindowTouchEventRecognizer_.h */,
+				0786D28B2269C12D00D53919 /* CYFKeyWindowTouchEventRecognizer_.m */,
+				0786D24D2265DC5700D53919 /* CYFTouchEventRecognizerDelegate-Protocol.h */,
+				0786D24A2265DBEA00D53919 /* CYFTouchEventRecognizer_.h */,
+				0786D24B2265DBEA00D53919 /* CYFTouchEventRecognizer_.m */,
+				0786D23E2265BFCF00D53919 /* CFYTouchEventFormatterBase_.h */,
+				0786D23F2265BFCF00D53919 /* CFYTouchEventFormatterBase_.m */,
+				0786D23B2265BF8800D53919 /* CYFKeyWindowTouchEventFormatter_.h */,
+				0786D23C2265BF8800D53919 /* CYFKeyWindowTouchEventFormatter_.m */,
+				0786D2412265C81100D53919 /* CYFTouchData_.h */,
+				0786D2422265C81100D53919 /* CYFTouchData_.m */,
+				0786D2382265B83F00D53919 /* NSValue+CYFTouchEventEnumValues_.h */,
+				0786D2392265B83F00D53919 /* NSValue+CYFTouchEventEnumValues_.m */,
+			);
+			path = Touch;
+			sourceTree = "<group>";
+		};
+		0786D2562265E78400D53919 /* Motion */ = {
+			isa = PBXGroup;
+			children = (
+				0786D22222603ED800D53919 /* CYFMotionManager_.h */,
+				0786D22322603ED800D53919 /* CYFMotionManager_.m */,
+				0786D2522265E66B00D53919 /* CYFMotionHandler_.h */,
+				0786D2572265E87A00D53919 /* CYFMotionHandler_.m */,
+				0786D24F2265E66A00D53919 /* CYFMotionModel_.h */,
+				0786D2592265E8C100D53919 /* CYFMotionModel_.m */,
+				0786D2502265E66A00D53919 /* CYFMotionModelDelta_.h */,
+				0786D25B2265E8F600D53919 /* CYFMotionModelDelta_.m */,
+				0786D2512265E66A00D53919 /* CYFOrientationHandler_.h */,
+				0786D25D2265E91D00D53919 /* CYFOrientationHandler_.m */,
+				0786D2542265E66B00D53919 /* CYFOriModel_.h */,
+				0786D25F2265E93E00D53919 /* CYFOriModel_.m */,
+				0786D2532265E66B00D53919 /* CYFOriModelDelta_.h */,
+				0786D2612265E95D00D53919 /* CYFOriModelDelta_.m */,
+			);
+			path = Motion;
+			sourceTree = "<group>";
+		};
+		0786D26322682B7E00D53919 /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				0786D2252260430600D53919 /* CYFBackgroundEventManager_.h */,
+				0786D2262260430600D53919 /* CYFBackgroundEventManager_.m */,
+				0786D26522682BD300D53919 /* CYFBackgroundEvent_.h */,
+				0786D2682268475400D53919 /* CYFBackgroundEvent_.m */,
+				0786D26422682BD300D53919 /* CYFBackgroundEventFormatter_.h */,
+				0786D26A2268483500D53919 /* CYFBackgroundEventFormatter_.m */,
+				0786D26722682BD300D53919 /* CYFBackgroundEventListener_.h */,
+				0786D26C2268492700D53919 /* CYFBackgroundEventListener_.m */,
+				0786D26622682BD300D53919 /* CYFBackgroundEventListenerDelegate_.h */,
+			);
+			path = Background;
+			sourceTree = "<group>";
+		};
+		0786D26E22685A4B00D53919 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				0786D21F22603E2D00D53919 /* CYFTextEventManager_.h */,
+				0786D22022603E2D00D53919 /* CYFTextEventManager_.m */,
+				0786D27122685A7700D53919 /* CYFTextEvent_.h */,
+				0786D27522685C1200D53919 /* CYFTextEvent_.m */,
+				0786D27222685A7700D53919 /* CYFTextEventFormatter_.h */,
+				0786D27722685C3100D53919 /* CYFTextEventFormatter_.m */,
+				0786D26F22685A7700D53919 /* CYFTextEventListener_.h */,
+				0786D27922685C4F00D53919 /* CYFTextEventListener_.m */,
+				0786D27022685A7700D53919 /* CYFTextFormfieldDataFormatter_.h */,
+				0786D27B22685C7D00D53919 /* CYFTextFormfieldDataFormatter_.m */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		0786D27D2268790F00D53919 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0786D2822269AB4800D53919 /* libSystem.B.tbd */,
+				0786D27E2268790F00D53919 /* libc.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0786D1ED225C9C5400D53919 /* nike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0786D204225C9C5600D53919 /* Build configuration list for PBXNativeTarget "nike" */;
+			buildPhases = (
+				0786D1EA225C9C5400D53919 /* Sources */,
+				0786D1EB225C9C5400D53919 /* Frameworks */,
+				0786D1EC225C9C5400D53919 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nike;
+			productName = nike;
+			productReference = 0786D1EE225C9C5400D53919 /* nike.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0786D1E6225C9C5400D53919 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = niu_o0;
+				TargetAttributes = {
+					0786D1ED225C9C5400D53919 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 0786D1E9225C9C5400D53919 /* Build configuration list for PBXProject "nike" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0786D1E5225C9C5400D53919;
+			productRefGroup = 0786D1EF225C9C5400D53919 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0786D1ED225C9C5400D53919 /* nike */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0786D1EC225C9C5400D53919 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0786D1FE225C9C5600D53919 /* LaunchScreen.storyboard in Resources */,
+				0786D1FB225C9C5600D53919 /* Assets.xcassets in Resources */,
+				0786D1F9225C9C5400D53919 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0786D1EA225C9C5400D53919 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0786D22422603ED800D53919 /* CYFMotionManager_.m in Sources */,
+				0786D2462265C9F700D53919 /* NSDate+CYFExtra_.m in Sources */,
+				0786D20F225ED89D00D53919 /* NSString+CYFExtra_.m in Sources */,
+				0786D25C2265E8F600D53919 /* CYFMotionModelDelta_.m in Sources */,
+				0786D24C2265DBEA00D53919 /* CYFTouchEventRecognizer_.m in Sources */,
+				0786D28C2269C12D00D53919 /* CYFKeyWindowTouchEventRecognizer_.m in Sources */,
+				0786D27A22685C4F00D53919 /* CYFTextEventListener_.m in Sources */,
+				0786D215225F467600D53919 /* SecureSensorData_.m in Sources */,
+				0786D1F6225C9C5400D53919 /* ViewController.m in Sources */,
+				0786D2432265C81100D53919 /* CYFTouchData_.m in Sources */,
+				0786D2492265DB3A00D53919 /* CYFTouchEventRecognizerFactory_.m in Sources */,
+				0786D23D2265BF8800D53919 /* CYFKeyWindowTouchEventFormatter_.m in Sources */,
+				0786D2312264398C00D53919 /* CYFKeyBoardEventManager_.m in Sources */,
+				0786D2602265E93E00D53919 /* CYFOriModel_.m in Sources */,
+				0786D201225C9C5600D53919 /* main.m in Sources */,
+				0786D218225F46A700D53919 /* SensorDataCache_.m in Sources */,
+				0786D2622265E95D00D53919 /* CYFOriModelDelta_.m in Sources */,
+				0786D27622685C1200D53919 /* CYFTextEvent_.m in Sources */,
+				0786D22E2264373800D53919 /* CYFSensorDataSnapshot_.m in Sources */,
+				0786D21E22603D9900D53919 /* CYFTouchEventManager_.m in Sources */,
+				0786D22B226098BA00D53919 /* FeistelCipher_.m in Sources */,
+				0786D26B2268483500D53919 /* CYFBackgroundEventFormatter_.m in Sources */,
+				0786D2882269C0A500D53919 /* CYFKeyBoardWindowTouchEventFormatter_.m in Sources */,
+				0786D2812269986100D53919 /* Hook.mm in Sources */,
+				0786D25E2265E91E00D53919 /* CYFOrientationHandler_.m in Sources */,
+				0786D2692268475400D53919 /* CYFBackgroundEvent_.m in Sources */,
+				0786D26D2268492700D53919 /* CYFBackgroundEventListener_.m in Sources */,
+				0786D28F2269C68200D53919 /* UIApplication+CYFKeyboard_.m in Sources */,
+				0786D2582265E87A00D53919 /* CYFMotionHandler_.m in Sources */,
+				0786D1F3225C9C5400D53919 /* AppDelegate.m in Sources */,
+				0786D21B2260270800D53919 /* CYFUtilities_.m in Sources */,
+				0786D212225F300700D53919 /* CYFManager_.m in Sources */,
+				0786D23422644F4900D53919 /* UIResponder+CYFInitialize_.m in Sources */,
+				0786D2272260430600D53919 /* CYFBackgroundEventManager_.m in Sources */,
+				0786D23A2265B83F00D53919 /* NSValue+CYFTouchEventEnumValues_.m in Sources */,
+				0786D237226495E300D53919 /* RSACrypt_.m in Sources */,
+				0786D27C22685C7D00D53919 /* CYFTextFormfieldDataFormatter_.m in Sources */,
+				0786D27822685C3100D53919 /* CYFTextEventFormatter_.m in Sources */,
+				0786D25A2265E8C100D53919 /* CYFMotionModel_.m in Sources */,
+				0786D2402265BFCF00D53919 /* CFYTouchEventFormatterBase_.m in Sources */,
+				0786D22122603E2D00D53919 /* CYFTextEventManager_.m in Sources */,
+				0786D28A2269C0F000D53919 /* CYFKeyBoardWindowTouchEventRecognizer_.m in Sources */,
+				0786D209225DBBA000D53919 /* CYFGlobalManager_.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0786D1F7225C9C5400D53919 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0786D1F8225C9C5400D53919 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0786D1FC225C9C5600D53919 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0786D1FD225C9C5600D53919 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0786D202225C9C5600D53919 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0786D203225C9C5600D53919 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0786D205225C9C5600D53919 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 82MGTF9MDJ;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/nike",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/nike/PrefixHeader.pch";
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				HEADER_SEARCH_PATHS = "/opt/iOSOpenDev/include/**";
+				INFOPLIST_FILE = nike/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cike.nike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development *";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0786D206225C9C5600D53919 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/nike",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/nike/PrefixHeader.pch";
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				HEADER_SEARCH_PATHS = "/opt/iOSOpenDev/include/**";
+				INFOPLIST_FILE = nike/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cike.nike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0786D1E9225C9C5400D53919 /* Build configuration list for PBXProject "nike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0786D202225C9C5600D53919 /* Debug */,
+				0786D203225C9C5600D53919 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0786D204225C9C5600D53919 /* Build configuration list for PBXNativeTarget "nike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0786D205225C9C5600D53919 /* Debug */,
+				0786D206225C9C5600D53919 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0786D1E6225C9C5400D53919 /* Project object */;
+}
