@@ -119,7 +119,15 @@
                         //TODO:
                         [self.phaseTwoEvents sortUsingComparator:^NSComparisonResult(CYFMotionModelDelta_ *  _Nonnull obj1, CYFMotionModelDelta_ *  _Nonnull obj2) {
                             
-                            return obj1.delta > obj2.delta;
+                            if (obj1.delta >= obj2.delta) {
+                                
+                                if (obj1.delta > obj2.delta) {return -1;}
+                                
+                                return 0;
+                            }else {
+                                return 1;
+                            }
+                            
                         }];
                         
                         [self.phaseTwoEvents removeLastObject];
