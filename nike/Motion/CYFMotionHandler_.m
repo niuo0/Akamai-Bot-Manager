@@ -34,6 +34,8 @@
 
 - (void)reset {
     
+    NSLog(@"%ld, %ld,%ld", self.phaseOneEvents.count, self.phaseTwoEvents.count, self.phaseThreeEvents.count);
+    
     [self.phaseOneEvents removeAllObjects];
     [self.phaseTwoEvents removeAllObjects];
     [self.phaseThreeEvents removeAllObjects];

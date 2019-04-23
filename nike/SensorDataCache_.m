@@ -8,7 +8,7 @@
 
 #import "SensorDataCache_.h"
 
-static NSString * const userKey = @"com.akamai.botman.defaults.sensor_data";
+static NSString * const userKey = @"com.akamai.botman.defaults.sensor_data_";
 
 @implementation SensorDataCache_
 

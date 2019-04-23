@@ -85,7 +85,7 @@
 - (void)createMotionManager{
     self.motionManager = [[CMMotionManager alloc] init];
     [self.motionHandler create];
-    //[self.oriHandler create];
+    [self.oriHandler create];
 }
 
 - (bool)configureMotionEvents{

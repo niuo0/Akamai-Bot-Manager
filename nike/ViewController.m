@@ -38,7 +38,7 @@
     NSLog(@"%@", s2);
     
     id ma = objc_msgSend(NSClassFromString(@"CYFManager"), @selector(sharedManager));
-    
+
     [ma initialSetUp];
     NSString * s = [CYFMonitor getSensorData];
     NSLog(@"or = %@", s);
