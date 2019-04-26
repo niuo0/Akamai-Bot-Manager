@@ -145,12 +145,13 @@
 
 - (assignmentBlock)deviceInfoAssignmentBlock {
     
-    return ^(NSString * str, float x) {
+    return ^(NSString * str, CFTimeInterval x) {
         
         if (!self.isDeviceInfoCalculated) {
             
             self.deviceInfo = str;
-            self.dInfoInitTime = CACurrentMediaTime() -x;
+            self.dInfoInitTime = CACurrentMediaTime() - x;
+            self.dInfoInitTime *= 1000.0;
             self.isDeviceInfoCalculated = YES;
             
         }

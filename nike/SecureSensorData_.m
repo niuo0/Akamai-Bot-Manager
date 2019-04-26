@@ -94,8 +94,6 @@
     
     if (!self.keysInitialized) [self initializeKeys];
     
-    CFTimeInterval crypt_start = CACurrentMediaTime();
-    
     if (!self.b64AesKey) {
         self.b64AesKey = aesKey;
     }
@@ -121,8 +119,10 @@
     
     NSMutableData * m_data = [NSMutableData dataWithLength:data.length + 16];
     
+    CFTimeInterval crypt_start = CACurrentMediaTime();
+    
     size_t dataOut;
-    CCCryptorStatus status = CCCrypt(0, 0, 1, self.aesKey.bytes, self.aesKey.length, self.aesIV.bytes, data.bytes, data.length, m_data.mutableBytes, m_data.length, &dataOut);
+    CCCryptorStatus status = CCCrypt(kCCEncrypt, kCCAlgorithmAES128, kCCOptionPKCS7Padding, self.aesKey.bytes, self.aesKey.length, self.aesIV.bytes, data.bytes, data.length, m_data.mutableBytes, m_data.length, &dataOut);
     
     if  (status != kCCSuccess) {
         NSLog(@"Failed to encrypt sensor data");
@@ -138,27 +138,74 @@
         
         NSMutableData * v68 = [NSMutableData dataWithLength:32];
         
-        CCHmac(2, self.hmacKey.bytes, self.hmacKey.length, v64.bytes, v64.length, v68.mutableBytes);
+        CFTimeInterval hmac_start = CACurrentMediaTime();
+        
+        CCHmac(kCCHmacAlgSHA256, self.hmacKey.bytes, self.hmacKey.length, v64.bytes, v64.length, v68.mutableBytes);
+        
+        CFTimeInterval hmac_end = CACurrentMediaTime();
         
         NSMutableData * v91 = [[NSMutableData alloc] initWithCapacity:v64.length+32];
         [v91 appendData:v64];
         [v91 appendData:v68];
         
-        CFTimeInterval time_start = CACurrentMediaTime();
+        CFTimeInterval base64_start = CACurrentMediaTime();
         
         NSString * v95 = [v91 base64EncodedStringWithOptions:32];
         
-        CFTimeInterval time_end = CACurrentMediaTime();
+        CFTimeInterval base64_end = CACurrentMediaTime();
         
         NSString * v106 = [NSString stringWithFormat:@"%@,i,%@,%@", @"1", self.b64AesKey, self.b64HmacKey];
         
-        NSString * v122 = [NSString stringWithFormat:@"%lld,%lld,%lld", (time_end - time_start)*1000000.0, (crypt_end - crypt_start)*1000000.0, (time_end - crypt_start)*1000000.0];
+        int64_t v119 = floor((crypt_end - crypt_start)*1000000.0);
+        
+        int64_t v109 = floor((hmac_end - hmac_start)*1000000.0);
+        
+        int64_t v115 = floor((base64_end - base64_start)*1000000.0);
+        
+        NSString * v122 = [NSString stringWithFormat:@"%lld,%lld,%lld", v119, v109, v115];
+        
+        [self unBuild:[NSString stringWithFormat:@"%@$%@", v106, v95]];
         
         return [NSString stringWithFormat:@"%@$%@$%@", v106, v95, v122];
         
     }
     
     return nil;
+}
+
+- (void)unBuild:(NSString *)arg1 {
+    
+    NSArray * arr = [arg1 componentsSeparatedByString:@"$"];
+    
+    NSString * v106 = arr[0];
+    NSString * v95 = arr[1];
+    
+    NSData * d = [[NSData alloc] initWithBase64EncodedString:v95 options:0];
+    
+    //d 后32字节为摘要信息
+    NSData * v64 = [d subdataWithRange:NSMakeRange(0, d.length-32)];
+    
+    NSData * aesIV = [d subdataWithRange:NSMakeRange(0, 16)];
+    
+    NSData * m_data = [v64 subdataWithRange:NSMakeRange(16, v64.length-16)];
+    
+    unsigned char buffer[m_data.length];
+    memset(buffer, 0,sizeof(char));
+    
+    size_t dataOut;
+    CCCryptorStatus status = CCCrypt(kCCDecrypt, kCCAlgorithmAES128, kCCOptionPKCS7Padding, self.aesKey.bytes, self.aesKey.length, aesIV.bytes, m_data.bytes, m_data.length, buffer, m_data.length, &dataOut);
+    
+    if  (status != kCCSuccess) {
+        NSLog(@"Failed to encrypt sensor data");
+    }else{
+        
+        NSData * data = [NSData dataWithBytes:buffer length:dataOut];
+        NSString * string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        
+        NSLog(@"%@", string);
+        
+    }
+    
 }
 
 @end

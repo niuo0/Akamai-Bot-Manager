@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nike/CYFManager_.m"
-            timestampString = "577701287.996401"
+            timestampString = "577952475.52508"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
+            startingLineNumber = "248"
+            endingLineNumber = "248"
             landmarkName = "-startOver"
             landmarkType = "7">
          </BreakpointContent>
@@ -51,15 +51,15 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            symbolName = "dispatch_time"
+            symbolName = "stringWithFormat:"
             moduleName = "">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "dispatch_time"
-                  moduleName = "libdispatch.dylib"
+                  symbolName = "+[NSString stringWithFormat:]"
+                  moduleName = "Foundation"
                   usesParentBreakpointCondition = "Yes"
                   offsetFromSymbolStart = "0">
                </Location>
@@ -73,13 +73,71 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nike/CYFManager_.m"
-            timestampString = "577701287.997466"
+            timestampString = "577952475.525411"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
-            landmarkName = "-buildSensorData:"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
+            landmarkName = "-getMilliSecondsFromSeconds:"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nike/SecureSensorData_.m"
+            timestampString = "577952475.5254689"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "-build:error:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "encryptString:publicKey:error:"
+            moduleName = "">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[RSACrypt_ encryptString:publicKey:error:]"
+                  moduleName = "nike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/niu_o0/Desktop/nike/nike/RSACrypt_.m"
+                  timestampString = "577952475.59531"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[RSACrypt encryptString:publicKey:error:]"
+                  moduleName = "nike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Build/Jenkins/workspace/iOS-Master-Build/CyberFendSDK/CyberFendSDK/Global/RSACrypt.m"
+                  timestampString = "577952475.597905"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "191"
+                  endingLineNumber = "191"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

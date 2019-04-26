@@ -7,6 +7,7 @@
 //
 
 #import "FeistelCipher_.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation FeistelCipher_
 
@@ -14,41 +15,45 @@
     
     int v11 = 0;
     int v12 = 32;
+    uint64_t v5;
+    uint v13;
     
-    uint64_t v5 = arg1;
+    int v4 = HIDWORD(arg1);
     
-    do {
-        
-        v5 ^=  v5 ^ ((arg2 << v11) | (arg2 >> v12));
-        
-        
-        ++ v11;
-        -- v12;
-        
-    } while (v11 != 16);
+    LODWORD(v5) = arg1;
+    
+    do
+    {
+        HIDWORD(v5) = v5;
+        v13 = (arg2 << v11) | (arg2 >> v12);
+        ++v11;
+        LODWORD(v5) = v5 ^ v4 ^ v13;
+        --v12;
+        v4 = HIDWORD(v5);
+    }
+    while ( v11 != 16 );
     
     return v5;
 }
 
 + (unsigned long long)decode:(unsigned long long)arg1 withKey:(unsigned int)arg2 {
     
-    uint64_t result;
-    signed int v5 = 17;
+    uint64_t result; // r0@1
+    signed int v5; // r12@1
+    unsigned int v6; // lr@2
     
     HIDWORD(result) = 16;
-    
-    do {
-        
-        -- HIDWORD(result);
+    v5 = 17;
+    do
+    {
+        --HIDWORD(result);
         LODWORD(result) = HIDWORD(arg1);
-        uint v6 = arg2 >> v5++;
+        v6 = arg2 >> v5++;
         HIDWORD(arg1) ^= ((arg2 << SBYTE4(result)) | v6) ^ arg1;
         LODWORD(arg1) = result;
-        
-    } while (SHIDWORD(result) > 0);
-    
+    }
+    while ( SHIDWORD(result) > 0 );
     HIDWORD(result) = HIDWORD(arg1);
-    
     return result;
     
 }

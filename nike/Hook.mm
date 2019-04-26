@@ -8,8 +8,7 @@ CHDeclareClass(SecureSensorData);
 
 CHMethod2(id, SecureSensorData, build, id, arg1, error, void *, arg2) {
     
-    
-    objc_msgSend(self, @selector(setHmacKey:), nil);
+    NSLog(@"%@", arg1);
     
     return CHSuper2(SecureSensorData, build, arg1, error, arg2);
     
@@ -45,6 +44,13 @@ CHMethod1(id, CYFManager, collectSensorData, long long , arg1) {
     
 }
 
+CHMethod1(long long , CYFManager, getMilliSecondsFromSeconds, double, arg1) {
+    
+    long long r = CHSuper1(CYFManager, getMilliSecondsFromSeconds, arg1);
+    
+    return r;
+}
+
 CHDeclareClass(CYFMotionHandler);
 
 CHMethod0(id, CYFMotionHandler, getSensorData) {
@@ -56,6 +62,17 @@ CHMethod0(id, CYFMotionHandler, getSensorData) {
     return dic;
     
 }
+
+CHDeclareClass(FeistelCipher);
+
+CHClassMethod2(ull, FeistelCipher, encode, ulong, arg1, withKey, uint, arg2) {
+    
+    ull l = CHSuper2(FeistelCipher, encode, arg1, withKey, arg2);
+    
+    return l;
+    
+}
+
 
 
 CHConstructor {
@@ -70,9 +87,14 @@ CHConstructor {
         CHHook3(CYFManager, performSelector, withObject, afterDelay);
         CHHook1(CYFManager, buildSensorData);
         CHHook1(CYFManager, collectSensorData);
+        CHHook1(CYFManager, getMilliSecondsFromSeconds);
         
         CHLoadLateClass(CYFMotionHandler);
         CHHook0(CYFMotionHandler, getSensorData);
+        
+        
+        CHLoadLateClass(FeistelCipher);
+        CHClassHook2(FeistelCipher, encode, withKey);
         
     }
     

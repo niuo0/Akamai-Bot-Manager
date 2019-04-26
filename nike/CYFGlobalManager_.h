@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef NSString *(^buildingBlock)(void);
 
-typedef void(^assignmentBlock)(NSString *, float);
+typedef void(^assignmentBlock)(NSString *, CFTimeInterval);
 
 @interface CYFGlobalManager_ : NSObject
 
@@ -23,7 +23,7 @@ typedef void(^assignmentBlock)(NSString *, float);
 @property(nonatomic, getter=isTestModeOn) _Bool testMode; // @synthesize testMode=_testMode;
 @property(nonatomic) unsigned long long autoPostMaxTransmissionLimit; // @synthesize autoPostMaxTransmissionLimit=_autoPostMaxTransmissionLimit;
 @property(nonatomic) double autoPostWakeUpTime; // @synthesize autoPostWakeUpTime=_autoPostWakeUpTime;
-@property(nonatomic) double dInfoInitTime; // @synthesize dInfoInitTime=_dInfoInitTime;
+@property(nonatomic, assign) NSTimeInterval dInfoInitTime; // @synthesize dInfoInitTime=_dInfoInitTime;
 @property(retain, nonatomic) NSString *sensorDataFieldName; // @synthesize sensorDataFieldName=_sensorDataFieldName;
 @property(retain, nonatomic) NSString *apiUrl; // @synthesize apiUrl=_apiUrl;
 @property(getter=isFrontEndPostEnabled) _Bool enableFrontEndPost; // @synthesize enableFrontEndPost=_enableFrontEndPost;

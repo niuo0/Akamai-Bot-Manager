@@ -11,6 +11,7 @@
 #import "CYFGlobalManager_.h"
 #import <AkamaiBMP/CYFMonitor.h>
 #import "CYFManager_.h"
+#import "RSACrypt_.h"
 
 @interface ViewController ()
 
@@ -47,6 +48,7 @@
     NSString * s_ =  [[CYFManager_ sharedManager] getSensorData];
     
     NSLog(@"self = %@",s_);
+    
 }
 
 

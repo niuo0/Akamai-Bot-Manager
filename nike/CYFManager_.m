@@ -73,7 +73,7 @@
 - (void)configure{
     
     [self setEventMask:@"do_en,dm_en,t_en"];
-    self.exceptionInfo = nil;
+    self.exceptionInfo = @"";
     self.sensorDataSnapshot = nil;
     self.sensorDataSnapshot = [[CYFSensorDataSnapshot_ alloc] init];
     self.autoPostIndex = 0;
@@ -184,21 +184,20 @@
             }
             
             NSString * ds = [[CYFGlobalManager_ sharedGlobalManager] getDeviceInfoString];
-            long long dsi = [CYFUtilities_ strToInt:ds];
+            long dsi = [CYFUtilities_ strToInt:ds];
             NSDate * date = [[CYFGlobalManager_ sharedGlobalManager] startingDate];
-            NSTimeInterval time = [date timeIntervalSince1970];
+            NSTimeInterval _time = [date timeIntervalSince1970];
             
-            long long mill = [self getMilliSecondsFromSeconds:time];
+            long long mill = [self getMilliSecondsFromSeconds:_time];
             
             uint32_t arc = arc4random_uniform(-1);
+    
             
+            NSString * v78 = [NSString stringWithFormat:@"%@,%ld,%u,%lld", ds, dsi, arc, mill >> 1];
             
+            long v199 = [self.textManager getTextEventVelocity];
             
-            NSString * v78 = [NSString stringWithFormat:@"%@,%ld,%u,%lld", ds, dsi, arc, mill];
-            
-            long long v199 = [self.textManager getTextEventVelocity];
-            
-            long long v198 = [self.touchManager getTouchEventVelocity];
+            long v198 = [self.touchManager getTouchEventVelocity];
             
             long v206 = [self.textManager getTotalTextEventCount];
             
@@ -208,15 +207,17 @@
             
             long long v91 = [self getMicroSecondsFromSeconds:d_time];
             
-            long long v188 = [self getMilliSecondsFromSeconds:[[NSDate date] timeIntervalSince1970]];
+            ll v188 = [self getMilliSecondsFromSeconds:[[NSDate date] timeIntervalSince1970] - _time];
             
             CACurrentMediaTime();
             
+            uint encode = v206 + v197 + [count intValue] + [m_count intValue];
             
-           unsigned long long code = [FeistelCipher_ encode:[count unsignedIntegerValue] withKey:[vel intValue] + [m_vel intValue]];
+           unsigned long long code = [FeistelCipher_ encode:encode withKey:v188];
             
+            long sp12 = v199 + v198 + [m_vel intValue] + [vel intValue];
             
-            NSString * v117 = [NSString stringWithFormat:@"%ld,%ld,%d,%d,%ld,%lld,%ld,%ld,%d,%d,%lld,%lld,-1,%llu,%lld,%@", v199, v198/*sp*/, [m_vel intValue]/*sp+4*/, [vel intValue]/*sp+8*/, 1/*sp+12*/, v188, v206, v197, [m_count intValue], [count intValue], v91, v188, code, mill, @"0"];
+            NSString * v117 = [NSString stringWithFormat:@"%ld,%ld,%d,%d,%ld,%lld,%ld,%ld,%d,%d,%lld,%lld,-1,%llu,%lld,%@", v199, v198/*sp*/, [m_vel intValue]/*sp+4*/, [vel intValue]/*sp+8*/, sp12/*sp+12*/, v188, v206, v197, [m_count intValue], [count intValue], v198, v91, code, mill, @"0"];
             
             
             NSString * string = [NSString stringWithFormat:@"%@-1,2,-94,-100,%@-1,2,-94,-101,%@-1,2,-94,-105,-1,2,-94,-102,%@-1,2,-94,-108,%@-1,2,-94,-110,-1,2,-94,-117,%@-1,2,-94,-111,%@-1,2,-94,-109,%@-1,2,-94,-112,-1,2,-94,-115,%@-1,2,-94,-106,%ld,%ld-1,2,-94,-70,-1,2,-94,-80,-1,2,-94,-120,%@-1,2,-94,-112,%@-1,2,-94,-121,", @"2.1.1", v78, self.eventMask, v195, v195_4, v196, m_sensorData, sensorData, v117, arg1, self.autoPostIndex, self.exceptionInfo, self.devicePerformance];
@@ -235,11 +236,11 @@
 }
 
 - (long long)getMilliSecondsFromSeconds:(double)arg1 {
-    return (long long)arg1*1000.0;
+    return arg1*1000.0;
 }
 
 - (long long)getMicroSecondsFromSeconds:(double)arg1{
-    return (long long)arg1*1000000.0;
+    return arg1*1000000.0;
 }
 
 - (void)startOver{
