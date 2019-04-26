@@ -123,6 +123,41 @@ static NSString * const CYFAkamaiBMPErrorDomain = @"com.akamai.bmp";
 + (id)encryptData:(NSData *)arg1 withKeyRef:(struct __SecKey *)arg2 isSign:(bool)arg3 error:(__autoreleasing id *)arg4 {
     
     
+    const uint8_t *srcbuf = (const uint8_t *)[arg1 bytes];
+    size_t srclen = (size_t)arg1.length;
+    size_t block_size = SecKeyGetBlockSize(arg2) * sizeof(uint8_t);
+    void *outbuf = malloc(block_size);
+    size_t src_block_size = block_size - 11;
+    NSMutableData *ret = [[NSMutableData alloc] init];
+    for(int idx=0; idx<srclen; idx+=src_block_size){
+        //NSLog(@"%d/%d block_size: %d", idx, (int)srclen, (int)block_size);
+        size_t data_len = srclen - idx;
+        if(data_len > src_block_size){
+            data_len = src_block_size;
+        }
+        size_t outlen = block_size;
+        OSStatus status = noErr;
+        status = SecKeyEncrypt(arg2,
+                               kSecPaddingPKCS1,
+                               srcbuf + idx,
+                               data_len,
+                               outbuf,
+                               &outlen
+                               );
+        if (status != 0) {
+            NSLog(@"SecKeyEncrypt fail. Error Code: %d", status);
+            ret = nil;
+            break;
+        }else{
+            [ret appendBytes:outbuf length:outlen];
+        }
+    }
+    free(outbuf);
+    CFRelease(arg2);
+    return ret;
+    
+    
+    
     size_t v11 = SecKeyGetBlockSize(arg2);
     
     void * v12 = malloc(v11);
