@@ -115,7 +115,7 @@
                   moduleName = "nike"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/niu_o0/Desktop/nike/nike/RSACrypt_.m"
-                  timestampString = "577952475.59531"
+                  timestampString = "578209806.719162"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -130,7 +130,7 @@
                   moduleName = "nike"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/Build/Jenkins/workspace/iOS-Master-Build/CyberFendSDK/CyberFendSDK/Global/RSACrypt.m"
-                  timestampString = "577952475.597905"
+                  timestampString = "578209806.721081"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "191"
@@ -138,6 +138,22 @@
                   offsetFromSymbolStart = "44">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nike/AppDelegate.m"
+            timestampString = "578198924.468889"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

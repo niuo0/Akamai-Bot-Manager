@@ -13,9 +13,7 @@
 @implementation UIResponder (CYFInitialize_)
 
 + (void)load{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_appDidFinishLaunching:) name:UIApplicationDidFinishLaunchingNotification object:nil];
-    
-    [self _appDidFinishLaunching:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:[self class] selector:@selector(_appDidFinishLaunching:) name:UIApplicationDidFinishLaunchingNotification object:nil];
 }
 
 + (void)_appDidFinishLaunching:(NSNotification *)noti {
